@@ -10,7 +10,7 @@
 
     <siteMapNode url="~/About/Default.aspx" title="About"  description="About this site">
       <siteMapNode url="~/About/Contact.aspx" description="Contact Us" title="Contact Us" />
-      <siteMapNode url="~/Reviews/All.aspx" description="About us" title="About Us" />
+      <siteMapNode url="~/About/AboutUs.aspx" description="About us" title="About Us" />
     </siteMapNode>
 
     <siteMapNode url="~/Login.aspx" title="Login" description="Login to this website" />
