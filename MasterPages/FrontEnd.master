@@ -3,15 +3,20 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
   <title></title>
   <asp:ContentPlaceHolder ID="head" runat="server">
   </asp:ContentPlaceHolder>
 </head>
+
 <body>
   <form id="form1" runat="server">
+
     <div id="PageWrapper">
+
       <div id="Header"><a href="~/" runat="server"></a></div>
+
       <div id="MenuWrapper">
         <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>
         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
@@ -21,17 +26,22 @@
           </LevelStyles>
         </asp:TreeView>
       </div>
+
       <div id="MainContent">
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath><br /><br />
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
       </div>
+
       <div id="Sidebar">
         Select a theme<asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
           <asp:ListItem>Monochrome</asp:ListItem>
           <asp:ListItem>DarkGrey</asp:ListItem>
         </asp:DropDownList>
       </div>
+
       <div id="Footer">Footer Goes Here</div>
+
     </div>
   </form>
 </body>
