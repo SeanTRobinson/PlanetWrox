@@ -18,11 +18,33 @@ public partial class Controls_Banner : System.Web.UI.UserControl
     {
       case Direction.Horizontal:
         HorizontalPanel.Visible = true;
+        HorizontalLink.HRef = NavigateUrl;
         break;
       case Direction.Vertical:
         VerticalPanel.Visible = true;
+        VerticalLink.HRef = NavigateUrl;
         break;
     }
 
+  }
+
+  public string NavigateUrl
+  {
+    get
+    {
+      object _navigateUrl = ViewState["NavigateUrl"];
+      if(_navigateUrl != null)
+      {
+        return (string)_navigateUrl;
+      }
+      else
+      {
+        return "http://p2p.wrox.com";
+      }
+    }
+    set
+    {
+      ViewState["NavigateUrl"] = value;
+    }
   }
 }
