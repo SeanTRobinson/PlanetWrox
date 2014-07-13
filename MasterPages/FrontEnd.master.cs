@@ -9,20 +9,42 @@ public partial class MasterPages_FrontEnd : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-      if(!Page.IsPostBack)
+      setTheme();
+      setMenu();
+    }
+
+    private void setTheme()
+    {
+      if (!Page.IsPostBack)
       {
         string selectedTheme = Page.Theme;
         HttpCookie preferredTheme = Request.Cookies.Get("PreferredTheme");
-        if(preferredTheme != null)
+        if (preferredTheme != null)
         {
           selectedTheme = preferredTheme.Value;
         }
-        if(!string.IsNullOrEmpty(selectedTheme))
+        if (!string.IsNullOrEmpty(selectedTheme))
         {
           ThemeList.Items.FindByValue(selectedTheme).Selected = true;
         }
       }
     }
+
+    private void setMenu()
+    {
+      switch (Page.Theme.ToLower())
+      {
+        case "darkgrey":
+          Menu1.Visible = false;
+          TreeView1.Visible = true;
+          break;
+        default:
+          Menu1.Visible = true;
+          TreeView1.Visible = false;
+          break;
+      }
+    }
+
     protected void ThemeList_SelectedIndexChanged(object sender, EventArgs e)
     {
       HttpCookie preferredTheme = new HttpCookie("PreferredTheme");
