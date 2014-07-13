@@ -38,6 +38,9 @@
           <asp:ListItem>Monochrome</asp:ListItem>
           <asp:ListItem>DarkGrey</asp:ListItem>
         </asp:DropDownList>
+        <br />
+        <br />
+        <Wrox:Banner ID="Banner1" runat="server" DisplayDirection="Vertical"></Wrox:Banner>
       </div>
 
       <div id="Footer">Footer Goes Here</div>
