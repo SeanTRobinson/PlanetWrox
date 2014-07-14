@@ -223,3 +223,8 @@ img
 {
   border: none;
 }
+
+.ErrorMessage
+{
+  color: red;
+}
