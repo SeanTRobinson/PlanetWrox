@@ -12,7 +12,11 @@
 
 <body>
   <form id="form1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+      <Scripts>
+        <asp:ScriptReference Path="~/Scripts/jquery-1.4.1.min.js" />
+      </Scripts>
+    </asp:ScriptManager>
     <div id="PageWrapper">
 
       <div id="Header"><a href="~/" runat="server"></a></div>
@@ -28,7 +32,9 @@
       </div>
 
       <div id="MainContent">
-        <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath><br /><br />
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+        <br />
+        <br />
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
       </div>
@@ -46,6 +52,10 @@
       <div id="Footer">Footer Goes Here</div>
 
     </div>
+
+    <asp:ContentPlaceHolder ID="cpClientScript" runat="server">
+    </asp:ContentPlaceHolder>
+
   </form>
 </body>
 </html>

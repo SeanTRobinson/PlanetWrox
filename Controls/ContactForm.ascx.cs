@@ -48,6 +48,7 @@ public partial class Controls_ContactForm : System.Web.UI.UserControl
         mySmtpClient.Send(myMessage);
 
         Message.Visible = true;
+        ThankYouMessage.Visible = true;
         FormTable.Visible = false;
       }
     }
