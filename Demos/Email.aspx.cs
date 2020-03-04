@@ -13,8 +13,8 @@ public partial class Demos_Email : BasePage
       MailMessage myMessage = new MailMessage();
       myMessage.Subject = "Test Message";
       myMessage.Body = "Hello World, front Planet Wrox!";
-      myMessage.From = new MailAddress("sean@seantrobinson.co.uk", "Sender Name");
-      myMessage.To.Add(new MailAddress("sean.t.robinson@googlemail.com", "Reciever Name"));
+      myMessage.From = new MailAddress("", "Sender Name");
+      myMessage.To.Add(new MailAddress("", "Reciever Name"));
       SmtpClient mySmtpClient = new SmtpClient();
       mySmtpClient.Send(myMessage);
     }
